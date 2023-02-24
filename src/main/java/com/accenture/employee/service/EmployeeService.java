@@ -42,8 +42,8 @@ public class EmployeeService {
 		if (updated != null) {
 
 			  JSONObject payrollJson = new JSONObject(); //
-			  payrollJson.put("EmployeeId",employee.getEmployeeId()); //
-			  payrollJson.put("Salary",employee.getSalary());
+			  payrollJson.put("employeeId",employee.getEmployeeId()); //
+			  payrollJson.put("salary",employee.getSalary());
 			  kafka.send(topic, payrollJson.toString());
 		}
 		return updated;
